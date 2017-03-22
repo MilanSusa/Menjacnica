@@ -13,6 +13,9 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if (naziv == null || naziv.isEmpty()) {
+			throw new RuntimeException("Atribut naziv ne sme biti null niti prazan string");
+		}
 		this.naziv = naziv;
 	}
 
@@ -21,6 +24,9 @@ public class Valuta {
 	}
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if (skraceniNaziv == null || skraceniNaziv.isEmpty()) {
+			throw new RuntimeException("Atribut skraceniNaziv ne sme biti null niti prazan string");
+		}
 		this.skraceniNaziv = skraceniNaziv;
 	}
 
@@ -29,6 +35,9 @@ public class Valuta {
 	}
 
 	public void setKursevi(LinkedList<Kurs> kursevi) {
+		if (kursevi.isEmpty()) {
+			throw new RuntimeException("Lista ne sme biti prazna");
+		}
 		this.kursevi = kursevi;
 	}
 
@@ -56,7 +65,7 @@ public class Valuta {
 			}
 			return false;
 		}
-		throw new RuntimeException("Objekat nije tipa Valuta.");
+		throw new RuntimeException("Objekat nije tipa Valuta");
 	}
 
 }
