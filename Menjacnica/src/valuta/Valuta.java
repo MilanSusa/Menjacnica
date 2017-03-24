@@ -14,7 +14,7 @@ public class Valuta {
 
 	public void setNaziv(String naziv) {
 		if (naziv == null || naziv.isEmpty()) {
-			throw new RuntimeException("Atribut naziv ne sme biti null niti prazan string");
+			throw new RuntimeException("Naziv ne sme biti null niti prazan string");
 		}
 		this.naziv = naziv;
 	}
@@ -25,7 +25,7 @@ public class Valuta {
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
 		if (skraceniNaziv == null || skraceniNaziv.isEmpty()) {
-			throw new RuntimeException("Atribut skraceniNaziv ne sme biti null niti prazan string");
+			throw new RuntimeException("Skraceni naziv ne sme biti null niti prazan string");
 		}
 		this.skraceniNaziv = skraceniNaziv;
 	}
@@ -43,7 +43,7 @@ public class Valuta {
 
 	@Override
 	public String toString() {
-		return "Valuta [naziv=" + naziv + ", skraceniNaziv=" + skraceniNaziv + ", kurs=" + kursevi + "]";
+		return "Valuta [naziv=" + naziv + ", skraceniNaziv=" + skraceniNaziv + ", kursevi=" + kursevi + "]";
 	}
 
 	@Override
