@@ -1,7 +1,6 @@
 package interfejs;
 
 import java.util.GregorianCalendar;
-
 import valuta.Kurs;
 
 public interface ValutaInterfejs {

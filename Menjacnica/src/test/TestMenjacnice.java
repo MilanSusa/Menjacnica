@@ -17,7 +17,7 @@ public class TestMenjacnice implements ValutaInterfejs {
 			if (valuta.getNaziv().equals(nazivValute)) {
 				LinkedList<Kurs> kursevi = valuta.getKursevi();
 				for (int j = 0; j < kursevi.size(); j++) {
-					if (kursevi.get(j).getNaDan().equals(naDan)) {
+					if (kursevi.get(j).getNaDan().get(GregorianCalendar.DATE) == naDan.get(GregorianCalendar.DATE)) {
 						throw new RuntimeException("Kurs za dati dan vec postoji");
 					}
 				}
@@ -34,7 +34,7 @@ public class TestMenjacnice implements ValutaInterfejs {
 			if (valuta.getNaziv().equals(nazivValute)) {
 				LinkedList<Kurs> kursevi = valuta.getKursevi();
 				for (int j = 0; j < kursevi.size(); j++) {
-					if (kursevi.get(j).getNaDan().equals(naDan)) {
+					if (kursevi.get(j).getNaDan().get(GregorianCalendar.DATE) == naDan.get(GregorianCalendar.DATE)) {
 						valuta.getKursevi().remove(j);
 						return;
 					}
@@ -50,7 +50,7 @@ public class TestMenjacnice implements ValutaInterfejs {
 			if (valuta.getNaziv().equals(nazivValute)) {
 				LinkedList<Kurs> kursevi = valuta.getKursevi();
 				for (int j = 0; j < kursevi.size(); j++) {
-					if (kursevi.get(j).getNaDan().equals(naDan)) {
+					if (kursevi.get(j).getNaDan().get(GregorianCalendar.DATE) == naDan.get(GregorianCalendar.DATE)) {
 						return valuta.getKursevi().get(j);
 					}
 				}
